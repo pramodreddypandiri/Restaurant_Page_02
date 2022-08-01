@@ -7,12 +7,16 @@
 body{
   background:url(/assets/pexels-maxyne-barcel-10402282\ 1.png);
   
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+  
   
 }
 .layer{
   background-color: rgba(38, 51, 69, 0.7);
   position: absolute;
-  height: 100vh;
+  
   width: 100%;
   z-index: -1;
 }
@@ -21,14 +25,19 @@ nav{
   justify-content: space-between;
   height: 100px;
   line-height: 100px;
+  align-items: center;
 
   
 }
+nav .list{
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+}
 .list li{
-  display:inline-block;
+  padding: 1em 1em;
   text-align: center;
-  padding: 10px 30px;
-  margin: 0px 20px;
+  
   color: #EDC126;
   font-size: 25px;
   font-weight: 400;
@@ -36,7 +45,8 @@ nav{
 }
 .logo{
   padding: 10px 10px  ;
-  margin: 20px 0px;
+  margin: 0px 0px;
+  margin-top: 10px;
   
 
 }
@@ -76,11 +86,111 @@ nav{
   font-size: 25px;
 
 }
-.bottom{
-  position:absolute;
-  bottom: 20px;
-  right: 20px;
+@media screen and (min-width:1200px){
+  .bottom{
+    position:absolute;
+    bottom: 20px;
+    right: 20px;
+  }
+  body{
+    background-repeat: no-repeat;
+  }
+
 }
+
+
 /* ------------------------------ */
 /* ---------- HERO ------------ */
 /* ------------------------------ */
+
+.menu-link{
+  display: none;
+  position: absolute;
+  width: 30px;
+  height: 25px;
+  top:2.8em;
+  right: 1em;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  
+}
+.menu-link  .bar{
+  width: 28px;
+  height: 3px;
+  background-color: #EDC126;
+  border-radius: 10px;
+  
+} 
+@media screen and (max-width:900px){
+  nav{
+    
+    /* background-color: #EB4D4B; */
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 40px;
+    gap: 0;
+  }
+  nav .logo{
+    line-height: 40px;
+    width: 140px;
+  }
+  
+  nav .list{
+   
+    width: 100%;
+    background-color: #EB4D4B;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 40px;
+    
+  }
+  .list li{
+    
+    width: 100%;
+  }
+  .list li:hover{
+    background-color: #1f1f1f;
+  }
+  nav .lis{
+    display: none;
+    width: 100%;
+  }
+  nav>div ul{
+    width: 100%;
+    margin: 0 10px;
+    padding: 0 10px;
+
+  }
+  .lis.active{
+    display: flex;
+  }
+  .button-small{
+    display: none;
+  }
+  .menu-link{
+    display: flex;
+  }
+  .hero-heading{
+    font-size: 5rem;
+  }
+  .hero{
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .bottom{
+    width: 40%;
+  }
+  .body{
+    background-position: center;
+    background-size: cover;
+  }
+
+  
+
+}
